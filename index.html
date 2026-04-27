@@ -10,9 +10,10 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Kaushan+Script&family=Limelight&family=Overlock+SC&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">  
     <style>
       :root {
-        /* Deep elegant green for text, gold for the running border */
+        /* Deep elegant green for back, gold for the running border and front text */
         --theme-color: #1b4d46; 
         --gold: #d4af37;
+        --light-gold: #dfb15b;
       }
 
       /* Reset & Base */
@@ -79,16 +80,17 @@
         overflow: hidden; 
       }
 
-      /* --- Front Style: Max Clarity (Transparent + Glaze) --- */
+      /* --- Front Style: Transparent, Bottom Aligned, Gold Text --- */
       .card-front {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        color: var(--theme-color); 
-        background: transparent;
+        justify-content: flex-end; /* Moved text to the bottom */
+        color: var(--gold); /* Changed to Gold */
+        background: transparent; 
         backdrop-filter: none;
         -webkit-backdrop-filter: none;
+        text-shadow: 0px 1px 3px rgba(255, 255, 255, 0.8);
       }
 
       .card-front > * {
@@ -136,14 +138,15 @@
       }
 
       .card-front i {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-        color: var(--theme-color); 
+        font-size: 2rem; 
+        margin-bottom: 0.5rem;
+        color: var(--gold); /* Changed to Gold */
       }
 
       .card-front h3 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        margin-bottom: 0.2rem;
+        color: var(--gold); /* Ensure heading is Gold */
       }
 
       .tangerine-bold {
@@ -162,7 +165,7 @@
 
       .card-back {
         transform: rotateY(180deg);
-        background-color: #2a9d8f; 
+        background-color: #2a9d8f; /* Back color */
         color: #fff; 
         display: flex;
         flex-direction: column;
@@ -187,11 +190,11 @@
         font-family:  "Overlock SC", sans-serif;
         font-weight: 700;
         font-style: normal;
-        font-size: 60px !important;
+        font-size: 40px !important; 
       }
 
       .delius-regular.small {
-        font-size: 30px !important;
+        font-size: 24px !important; 
       }
 
       /* Backgrounds */
@@ -301,7 +304,7 @@
         <div class="card-inner cardone">
           <div class="card-front">
             <i class="fas fa-paper-plane"></i>
-            <h3 class="delius-regular">What's Next!</h3>
+            <h3 class="delius-regular small">What's Next!</h3>
           </div>
           <div class="card-back">
             <p class="kaushan-script-regular">
@@ -316,7 +319,7 @@
         <div class="card-inner cardtwo">
           <div class="card-front">
             <i class="fas fa-plane"></i>
-            <h3 class="delius-regular">When!</h3>
+            <h3 class="delius-regular small">When!</h3>
           </div>
           <div class="card-back">
             <h2 class="limelight-regular">Thursday</h2>
@@ -330,7 +333,7 @@
         <div class="card-inner cardthree">
           <div class="card-front">
             <i class="fas fa-rocket"></i>
-            <h3 class="delius-regular">Where!</h3>
+            <h3 class="delius-regular small">Where!</h3>
           </div>
           <div class="card-back">
             <h2 class="dm-serif-text-regular">Sooraj Auditorium</h2>
